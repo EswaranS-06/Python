@@ -1,12 +1,19 @@
 import random
 
+class test():
+    def __init__(self, name):
+        self.name = name
+    def dis(self):
+        print(self.name)
+
+t = test('ass')
 cus_dict = dict()
 ac_no = random.randint(1000,9999)
-cus_dict.update({6502:'acc'})
-cus_dict.update({6532:'aii'})
+cus_dict.update({6502:t})
+cus_dict.update({6532:test('res')})
 cus_dict.update({6504:'att'})
 cus_dict.update({6602:'arr'})
-print(cus_dict.get(6503, "Not Found"))
+print(cus_dict[6532].dis())
 
 '''a = 4**0.5
 print(a)
