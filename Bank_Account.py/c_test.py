@@ -1,4 +1,5 @@
-class Bank_Account():
+import time as t
+class Bank():
     
     def __init__(self, account_holder, age):
         
@@ -26,3 +27,18 @@ class Bank_Account():
         
     def __str__(self):
         return f" \tAccount Holder,s Details \n \tName:- {self.account_holder} \n \tBalance:- {self.balance} \n _________________________\n \tAge:- {self.age}  \n \n"
+cus = {}    
+print('Welcome to CLI Bank ')
+while(True):
+    print(f'''
+          1. To Create a new A/c
+          2. Login to Existing A/c
+          ''')
+    c = int(input('Enter your choie:'))
+    if c == 1:
+        name = input('Enter your Name:')
+        age = int(input('Enter your Name:'))
+        t.sleep(2)
+        ac = int(input('Crate a New Account Number 1000-9999: '))
+        t.sleep(4)
+        if ac 
