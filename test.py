@@ -1,4 +1,17 @@
-import random
+sel = input('1 \n 2 \n 3\nselect nuumber: ')
+amd = ''
+if '1' in sel:
+    amd +='name '
+if '2' in sel:
+    amd += 'address '
+if '3' in sel:
+    amd += 'id '
+    
+print(amd.rstrip().replace(' ',', '))
+    
+
+
+'''import random
 
 class test():
     def __init__(self, name):
@@ -13,7 +26,7 @@ cus_dict.update({6502:t})
 cus_dict.update({6532:test('res')})
 cus_dict.update({6504:'att'})
 cus_dict.update({6602:'arr'})
-print(cus_dict[6532].dis())
+print(cus_dict[6532].dis())'''
 
 '''a = 4**0.5
 print(a)
