@@ -1,4 +1,7 @@
-sel = input('1 \n 2 \n 3\nselect nuumber: ')
+if None:
+    print(True)
+
+'''sel = input('1 \n 2 \n 3\nselect nuumber: ')
 amd = ''
 if '1' in sel:
     amd +='name '
@@ -7,7 +10,7 @@ if '2' in sel:
 if '3' in sel:
     amd += 'id '
     
-print(amd.rstrip().replace(' ',', '))
+print(amd.rstrip().replace(' ',', '))'''
     
 
 
