@@ -1,7 +1,7 @@
 import time
 def clock():
     try:
-        h, m, s = 11, 59, 50
+        h, m, s = 11, 59, 50 
         while True:
             print(f"\r {h:02d}:{m:02d}:{s:02d}", end='', flush= True)
             time.sleep(1)

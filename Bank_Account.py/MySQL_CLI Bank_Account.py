@@ -30,7 +30,7 @@ while True:
             5. Account Info
             0. Exit
             """)
-        while (sql.data_sel(ac=ac)):
+        while sql.data_sel(ac=ac):
             c = int(input('Enter your choise: '))
             if c == 1:
                 dep = int(input('Enter the amount to Deposit: '))

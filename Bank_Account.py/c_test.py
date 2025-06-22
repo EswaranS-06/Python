@@ -7,30 +7,28 @@ class Bank():
         
         self.account_holder = account_holder
         print(f"\n An Account has been created Successfully under the name of [{self.account_holder}] \n\n")
-        self.balance = 0.0
+        self.__balance = 0.0
         self.age = age
         
     def deposit(self, deposites):
         if deposites <= 0:
             raise ValueError(f"Amount shoudle be above zero'0'")
         
-        self.balance +=  deposites
+        self.set_balance(self.get_balance() +  deposites)
         print("Deposit successful!\n")
         
     def withdraw(self, withdraws):
-        if withdraws > self.balance:
-            raise ValueError(f"\nYour A/C balance is [{self.balance}] So your unable to withdraw [{withdraws}]")
+        if withdraws > self.get_balance():
+            raise ValueError(f"\nYour A/C balance is [{self.get_balance()}] So your unable to withdraw [{withdraws}]")
             
-        self.balance -= withdraws
+        self.set_balance (self.get_balance() - withdraws)
         print("Withdrawal successful!\n")
         
     def get_balance(self):
-        print(f"""
-    Your Account Balance
-    _________________________
-        {self.balance}$ 
-    _________________________ 
-    """)
+        return self.__balance
+    
+    def set_balance(self, bal):
+        self.__balance = bal
         
     def __str__(self):
         return f""" 
@@ -38,7 +36,7 @@ class Bank():
     Account Holder,s Details
         - Name:- {self.account_holder}
         - Age:- {self.age}
-        - Balance:- {self.balance}
+        - Balance:- {self.get_balance()}
     _________________________
     """
 cus = {}    
