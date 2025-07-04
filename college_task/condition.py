@@ -1,4 +1,5 @@
 def isEmpty(m):
+    print(f"\nThis Machine still have {m} cloths\n")
     return bool(m)
 
 def reload(m):
@@ -14,14 +15,14 @@ def reload(m):
         return m
     
 def unload(m):
-    return m-1 if isEmpty(m) else m
+    return m-1 if bool(m) else m
     
 m1 = m2 = m3 = m4 = 0
 print("Welcome To Our  Laundary")
 while True:
     c = 1
     for i in m1, m2, m3, m4:
-        print(f"Machine {c} is Filled with {i} cloths" if isEmpty(i) else f"Machine {c} is Empty")
+        print(f"Machine {c} is Filled with {i} cloths" if bool(i) else f"Machine {c} is Empty")
         c+=1
     c = int(input("\nSelect any empty machine: "))
     if c == 0:
