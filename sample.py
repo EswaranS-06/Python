@@ -1,12 +1,16 @@
-n = 'Eswa ARN  sss'
-lst = n.split(' ')
-bs = ''
-for i in lst:
-  if len(bs) < len(i):
-    bs = ''.join(i)
+d = {1:1, 2:3}
+if not (d.get(3)):
+  d.update({2:d.get(2)+1})
+print(d)
+# n = 'Eswa ARN  sss'
+# lst = n.split(' ')
+# bs = ''
+# for i in lst:
+#   if len(bs) < len(i):
+#     bs = ''.join(i)
     
-print(bs)
-print()
+# print(bs)
+# print()
 '''
 thislist = ["apple", "banana", "cherry"]
 thislist[1] = "blackcurrant"
