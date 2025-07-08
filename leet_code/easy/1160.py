@@ -13,12 +13,7 @@ class Solution:
                     else:
                         d.update({j:0})
                         
-        res = 0 
-        print(d)            
-        for i in d.values():
-            print(i)
-                
-        return res
+       
                     
         # lst = []
         # index = -1
