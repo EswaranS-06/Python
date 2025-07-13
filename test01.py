@@ -1,17 +1,22 @@
-def fact(n):
-    if n == 0:
-        return sum
-    print(n)
-    if n!=0:
-        fact(n)
+from random import randrange as r
+from time import sleep as s
+while True:
+    if r(0,) == 4:
+        print("yes")
+# def fact(n):
+#     if n == 0:
+#         return sum
+#     print(n)
+#     if n!=0:
+#         fact(n)
 
-#fact(5)
+# #fact(5)
 
-n, fact = 5, 1
-while n!=0:
-    n = n-1
-    fact = fact * n
-    print(fact, n)
+# n, fact = 5, 1
+# while n!=0:
+#     n = n-1
+#     fact = fact * n
+#     print(fact, n)
 
 '''names = ['rex', 'ram', 'roy', 'rani']
 marks = [98, 50, 59, 67]
