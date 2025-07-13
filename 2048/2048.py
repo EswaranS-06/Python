@@ -17,7 +17,7 @@ def move_up(tiles): #function to move tiles up
     pass
 
 def move_down(tiles): #function to move tiles down
-    pass
+      pass
 
 def add_new_tile(tiles): #function to add a new tile (2 or 4) to the board
     while True:
@@ -30,7 +30,8 @@ def add_new_tile(tiles): #function to add a new tile (2 or 4) to the board
 
 
 def check_game_over(tiles): #function to check if the game is over
-    pass
+    if not any(0 in row for row in tiles):
+        return True
 
 def main():
     tiles = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]] #initialize the game board
@@ -53,12 +54,12 @@ def main():
             print("Invalid move! Please enter w/a/s/d.")
             continue
         
-        add_new_tile(tiles) #add a new tile after each valid move
-        
         if check_game_over(tiles): #check if the game is over
             display(tiles)
             print("Game Over!")
             break
+        
+        add_new_tile(tiles) #add a new tile after each valid move
         
 if __name__ == main():
     main()
