@@ -1,8 +1,10 @@
 from random import randrange as r
 from time import sleep as s
 while True:
-    if r(0,) == 4:
-        print("yes")
+    a = r(2,5,2)
+    a = r(2,5,2)
+    print(a)
+
 # def fact(n):
 #     if n == 0:
 #         return sum

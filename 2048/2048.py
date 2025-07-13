@@ -20,8 +20,14 @@ def move_down(tiles): #function to move tiles down
     pass
 
 def add_new_tile(tiles): #function to add a new tile (2 or 4) to the board
-    pass
-        
+    while True:
+        for i in [random.randrange(0,4)]:
+            for j in [random.randrange(0,4)]:
+                if tiles[i][j] == 0:
+                    value = random.randrange(1, 3) * 2  
+                    tiles[i][j] = value
+                    return
+
 
 def check_game_over(tiles): #function to check if the game is over
     pass
