@@ -1,7 +1,6 @@
 from datetime import datetime
 import time
 import calendar
-import pytz
 
 print(calendar.month(2006, 2))
 
