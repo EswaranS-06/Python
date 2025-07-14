@@ -5,18 +5,30 @@ import random
 from tabulate import tabulate
 from os import system as cls
 
-def display(tiles): #function to display the game board
-    cls('cls')
-    print(tabulate(tiles, tablefmt='fancy_grid'))
     
-def added_value(row):
+def display(tiles):
+    cls('cls')  # Clear the console screen
+    print("2048 Game Board:")
+    for i in range(4):
+        for j in range(4):
+            print(f"{(tiles[i][j]):^5}", end="|")
+        print("\n------------------------")
+    
+
+# def display(tiles): #function to display the game board
+#     cls('cls')
+#     print(tabulate(tiles, tablefmt='fancy_grid'))
+    
+def added_value(row): #function to add values of tiles
     i = 1
+    global max_value
     while i<=len(row):
         if len(row) <= i:
                 return row
         value = row[i - 1] + row [i]
         if value >> 1 == row[i]:
             row[i-1] = value
+            max_value += value
             row.pop(i)
         else :
             i+=1
@@ -96,11 +108,14 @@ def check_game_over(tiles): #function to check if the game is over
 def main():
     #tiles = [[0, 2, 0, 0], [2, 0, 0, 2], [2, 2, 4, 8], [0, 0, 0, 8]]
     tiles = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]] #initialize the game board
+    global max_value
+    max_value = 0 #initialize the maximum value
     add_new_tile(tiles) #add the first tile
     add_new_tile(tiles) #add the second tile
     
     while True:
         display(tiles) #display the current state of the board
+        print(f"Max Value: {max_value}")
         move = input("Enter move (w/a/s/d): ").strip().lower() #get user input for move
         
         if move == 'a':
